@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Bait Boat Control</title>
+  <link rel="stylesheet" href="/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/nipplejs@0.10.1/dist/nipplejs.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Bait Boat</h1>
+    <div id="conn-status" class="badge badge-off">Disconnected</div>
+  </header>
+
+  <main>
+    <div id="joystick-zone"></div>
+
+    <div class="controls-row">
+      <button id="bait-btn">Скинути прикормку</button>
+      <div id="battery" class="badge">Battery: --</div>
+    </div>
+  </main>
+
+  <details id="admin-panel">
+    <summary>Адміністрування</summary>
+    <div class="admin-body">
+      <button id="update-btn">Перевірити оновлення</button>
+      <div id="update-result"></div>
+      <h3>Бекапи</h3>
+      <ul id="backup-list"></ul>
+    </div>
+  </details>
+
+  <script src="/control.js"></script>
+</body>
+</html>

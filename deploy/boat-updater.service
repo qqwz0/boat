@@ -1,0 +1,11 @@
+[Unit]
+Description=Bait Boat self-updater (one-shot)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+# TODO: adjust WorkingDirectory/paths to match the actual deployment user and clone location.
+WorkingDirectory=/home/pi/Boat
+EnvironmentFile=/home/pi/Boat/.env
+ExecStart=/home/pi/Boat/.venv/bin/python /home/pi/Boat/deploy/updater.py update
