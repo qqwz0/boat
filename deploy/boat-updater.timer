@@ -1,9 +1,0 @@
-[Unit]
-Description=Run the Bait Boat self-updater hourly
-
-[Timer]
-OnCalendar=hourly
-Persistent=true
-
-[Install]
-WantedBy=timers.target
